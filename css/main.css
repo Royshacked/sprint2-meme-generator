@@ -1,4 +1,17 @@
-* {
-    box-sizing: border-box;
-}
+/* basics = basic things for the design the reacccur*/
+@import url(basics/base.css);
+@import url(basics/layouts.css);
+@import url(basics/helpers.css);
 
+/* setup = css rules or usable while working */ 
+@import url(setup/variables.css);
+@import url(setup/typography.css);
+
+/* components */
+@import url(components/header.css);
+@import url(components/gallery.css);
+@import url(components/editor.css);
+@import url(components/footer.css);
+
+/* mediaqueries */
+@import url(setup/mq.css)
