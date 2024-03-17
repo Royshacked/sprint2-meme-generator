@@ -13,3 +13,20 @@
 .main-layout > *.full {
     grid-column: 1 /-1;
 }
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-editor {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.main-footer {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
