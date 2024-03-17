@@ -1,0 +1,33 @@
+.main-header {
+    background-color: var(--primary-bgc-clr);
+    color: var(--primary-titles-clr);
+}
+
+.main-header .header-logo {
+    margin: 0;
+    padding: 0.5em;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.main-header .header-nav > button{
+    height: 2em;
+    border: 0;
+
+    background-color: var(--primary-bgc-clr);
+    color: var(--primary-titles-clr);
+
+    font-size: 1em;
+
+    cursor: pointer;
+}
+
+.main-header .header-nav .nav-gallery {
+    border-inline-end: 1px solid RGBA(138, 138, 138, 1);
+}
+
+.main-header .header-nav > button:hover {
+    color: RGBA(138, 138, 138, 1);
+    border-block-end: 1px solid RGBA(138, 138, 138, 1);
+}
+

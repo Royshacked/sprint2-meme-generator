@@ -3,9 +3,9 @@
 @import url(basics/layouts.css);
 @import url(basics/helpers.css);
 
-/* setup = css rules or usable while working 
+/* setup = css rules or usable while working  */
 @import url(setup/variables.css);
-@import url(setup/typography.css); */
+@import url(setup/typography.css);
 
 /* components */
 @import url(components/header.css);

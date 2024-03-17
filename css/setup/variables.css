@@ -1,0 +1,17 @@
+:root {
+    --primary-bgc-clr:RGBA(255, 127, 0, 1);
+    /* --primary-txt-clr:#FFFFFF; */
+    --primary-titles-clr:#FFFFFF;
+    
+
+    /* --header-bgc-clr:RGBA(41, 41, 41, 1);
+    --header-txt-clr:#FFFFFF; */
+
+    /* --btn-txt-clr:#C2C1C1;
+    --btn-border-clr:RGBA(194, 194, 194, 1);
+    --active-clr:#58C93A; */
+
+    /* --footer-bgc-clr:RGBA(248, 248, 248, 1);
+    --footer-logo-clr:#292929;
+    --footer-small-clr:#A6A6A6 */
+}

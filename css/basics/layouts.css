@@ -18,6 +18,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    padding-inline: 1em;
 }
 
 .main-editor {
