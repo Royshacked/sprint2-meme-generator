@@ -1,0 +1,12 @@
+.main-footer {
+    background-color: var(--primary-bgc-clr);
+    color: var(--primary-titles-clr);
+}
+
+.main-footer .footer-logo {
+    margin: 0;
+    margin-block-end: 1em;
+
+    font-size: 2em;
+    font-weight: bold;
+}
