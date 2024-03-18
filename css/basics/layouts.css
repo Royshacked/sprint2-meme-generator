@@ -25,6 +25,7 @@
 .main-editor {
     display: grid;
     grid-auto-flow: column;
+    justify-content: center;
 }
 
 .main-footer {

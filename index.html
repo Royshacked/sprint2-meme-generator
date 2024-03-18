@@ -8,7 +8,7 @@
     <title>Meme generator</title>
 </head>
 
-<body class="main-layout">
+<body class="main-layout" onload="onInit()">
     <header class="main-header full">
         <h2 class="header-logo">memegen</h2>
         <nav class="header-nav">
@@ -17,14 +17,16 @@
         </nav>
     </header>
 
-    <main class = "main-gallery hidden">
-        
+    <main class="main-gallery hidden">
+
     </main>
 
-    <main class = "main-editor">
-        <canvas class="editor-canvas" height="450" width="450"></canvas>
+    <main class="main-editor">
+        <div class="canvas-container">
+            <canvas class="editor-canvas" height="400" width="400"></canvas>
+        </div>
         <aside class="editor">
-            <input class="editor-txt-input" type="text" placeholder="Insert text...">
+            <input class="editor-txt-input" type="text" placeholder="Insert text..." oninput="onTextChange(this)">
             <section class="editor-controls">
                 <button class="btn-up-dn">up down</button>
                 <button class="btn-add">add</button>
@@ -37,7 +39,7 @@
                 <input class="inp-impact" type="list" placeholder="impact">
                 <button class="btn-fill">fill</button>
                 <input class="inp-color" type="color">
-                <nav class ="select-icon">icons</nav>
+                <nav class="select-icon">icons</nav>
             </section>
             <button class="editor-share">Share</button>
         </aside>
@@ -48,7 +50,12 @@
         <small class="footer-rights">all rights reserved 2024</small>
     </footer>
 
-    <script src = "js/main.js"></script>
+    
+    <script src="js/service/meme.service.js"></script>
+    <script src="js/service/gallery.service.js"></script>
+    <script src="js/meme.controller.js"></script>
+    <script src="js/gallery.controller.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,13 @@
+.canvas-container {
+    width: 40vw;
+}
+
+.editor {
+    width: 40vw;
+}
+
+.editor-canvas {
+    border: 1px solid lightgray;
+}
+
+
