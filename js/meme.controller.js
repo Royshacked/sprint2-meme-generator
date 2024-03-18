@@ -3,7 +3,7 @@
 function renderMeme() {
     const meme = getMeme()
     const elImg = new Image()
-
+    
     elImg.src = `meme-imgs/meme-imgs (square)/${meme.selectedImgId}.jpg`
 
     gElCanvas.height = (elImg.naturalHeight / elImg.naturalWidth) * gElCanvas.width
