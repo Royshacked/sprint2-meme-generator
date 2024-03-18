@@ -26,7 +26,7 @@
             <canvas class="editor-canvas" height="400" width="400"></canvas>
         </div>
         <aside class="editor">
-            <input class="editor-txt-input" type="text" placeholder="Insert text..." oninput="onTextChange(this)">
+            <input class="editor-txt-input" type="text" placeholder="Insert text..." oninput="onTextChange(this.value)">
             <section class="editor-controls">
                 <button class="btn-up-dn">up down</button>
                 <button class="btn-add">add</button>
@@ -41,7 +41,8 @@
                 <input class="inp-color" type="color">
                 <nav class="select-icon">icons</nav>
             </section>
-            <button class="editor-share">Share</button>
+            <a href="#" onclick="onDownload(this)" download="my-meme.jpg">Download</a>
+            
         </aside>
     </main>
 

@@ -3,7 +3,7 @@
 function renderMeme() {
     const meme = getMeme()
     const elImg = new Image()
-    
+
     elImg.src = `imgs/${meme.selectedImgId}.jpg`
 
     gElCanvas.height = (elImg.naturalHeight / elImg.naturalWidth) * gElCanvas.width
@@ -15,21 +15,32 @@ function renderMeme() {
 }
 
 function renderCanvasTxt(meme) {
-    const {txt,size,color} = meme.lines[0]
-    
+    const { txt, size, color } = meme.lines[0]
+
     gCtx.font = `${size}px Arial`
     gCtx.fillText(txt, 10, 50)
+    gCtx.strokeText(txt, 10, 50)
 }
 
-function onTextChange(elTxtInput) {
-    const txt = elTxtInput.value
+function onTextChange(txt) {
     setLineTxt(txt)
     renderMeme()
+}
+
+function onDownload(elLink) {
+    const dataUrl = gElCanvas.toDataURL()
+
+    elLink.href = dataUrl
 }
 
 function showMeme() {
     document.querySelector('.main-editor').classList.remove('hidden')
     document.querySelector('.main-gallery').classList.add('hidden')
+    clearEditInputs()
+}
+
+function clearEditInputs() {
+    document.querySelector('.editor-txt-input').value = ''
 }
 
 
