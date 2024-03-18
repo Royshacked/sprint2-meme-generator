@@ -15,7 +15,6 @@ function onImgSelect(imgId) {
     setImg(imgId)
     renderMeme() 
     showMeme() 
-    console.log(gMeme)
 }
 
 function showGallery() {

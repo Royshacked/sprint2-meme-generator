@@ -1,5 +1,5 @@
 var gImgs = [
-    {id: 1, url: 'meme-imgs/meme-imgs (square)/1.jpg', keyWords: ['funny', 'cat']}
+    {id: 1, url: 'imgs/1.jpg', keyWords: ['funny', 'cat']}
 
 ]
 
@@ -15,7 +15,7 @@ function createImg({id,url,keyWords}) {
     gImgs.push(
         {
            id: id,
-           url: `meme-imgs/meme-imgs (square)/${id}.jpg`, 
+           url: `imgs/${id}.jpg`, 
            keyWords: ['funny', 'dog']
         }
     )
