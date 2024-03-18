@@ -12,6 +12,7 @@ function onInit() {
 
     renderMeme()
     renderGallery()
+    showGallery()
 }
 
 function resizeCanvas() {

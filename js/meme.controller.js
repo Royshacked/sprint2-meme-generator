@@ -27,3 +27,9 @@ function onTextChange(elTxtInput) {
     renderMeme()
 }
 
+function showMeme() {
+    document.querySelector('.main-editor').classList.remove('hidden')
+    document.querySelector('.main-gallery').classList.add('hidden')
+}
+
+

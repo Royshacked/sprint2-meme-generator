@@ -18,11 +18,6 @@ function onImgSelect(imgId) {
     console.log(gMeme)
 }
 
-function showMeme() {
-    document.querySelector('.main-editor').classList.remove('hidden')
-    document.querySelector('.main-gallery').classList.add('hidden')
-}
-
 function showGallery() {
     document.querySelector('.main-editor').classList.add('hidden')
     document.querySelector('.main-gallery').classList.remove('hidden')
