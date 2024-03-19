@@ -10,18 +10,23 @@ function renderMeme() {
 
     elImg.onload = () => {
         gCtx.drawImage(elImg, 0, 0, gElCanvas.width, gElCanvas.height)
-        renderCanvasTxt(meme)
+        renderCanvasTxt()
     }
 }
 
-function renderCanvasTxt(meme) {
+function renderCanvasTxt() {
+    const meme = getMeme()
     const { selectedLineIdx, lines } = meme
 
-    lines.forEach(line => {
+    lines.forEach((line, idx) => {
         let { txt, size, color, x, y } = line
 
         txt === '' ? txt = 'Insert your text here...' : txt
 
+        if (idx === selectedLineIdx) {
+            gCtx.fillStyle = "#FDF6F640"
+            gCtx.fillRect(x, y - 20, 200, size+10)
+        }
         gCtx.font = `${size}px Arial`
         gCtx.fillStyle = `${color}`
         gCtx.fillText(txt, x, y)
@@ -54,6 +59,13 @@ function onRemoveLine() {
     renderMeme()
 }
 
+function onSwitchLine() {
+    clearEditInputs()
+    switchLine()
+    renderMeme()
+}
+
+
 function onDownload(elLink) {
     const dataUrl = gElCanvas.toDataURL()
 
@@ -68,6 +80,5 @@ function showMeme() {
 
 function clearEditInputs() {
     document.querySelector('.editor-txt-input').value = ''
+    document.querySelector('.inp-color').value = '#000000'
 }
-
-
