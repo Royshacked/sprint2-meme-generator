@@ -18,12 +18,18 @@ function renderCanvasTxt(meme) {
     const { txt, size, color } = meme.lines[0]
 
     gCtx.font = `${size}px Arial`
+    gCtx.fillStyle = `${color}`
     gCtx.fillText(txt, 10, 50)
     gCtx.strokeText(txt, 10, 50)
 }
 
 function onTextChange(txt) {
     setLineTxt(txt)
+    renderMeme()
+}
+
+function onChangeTxtColor(txtColor) {
+    setLineColor(txtColor)
     renderMeme()
 }
 

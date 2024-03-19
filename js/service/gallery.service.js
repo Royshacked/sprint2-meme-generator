@@ -1,6 +1,5 @@
 var gImgs = [
     {id: 1, url: 'imgs/1.jpg', keyWords: ['funny', 'cat']}
-
 ]
 
 createGallery()

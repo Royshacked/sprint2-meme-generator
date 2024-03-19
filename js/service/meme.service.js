@@ -8,10 +8,6 @@ function getMeme() {
     return meme
 }
 
-function setLineTxt(txt) {
-    gMeme.lines[0].txt = txt
-}
-
 function setImg(imgId) {
     gMeme = {
         selectedImgId: imgId,
@@ -19,4 +15,20 @@ function setImg(imgId) {
         lines: [{ txt: 'Insert your text here...', size: 20, color: 'red' }]
     }
 }
+
+function setLineTxt(txt) {
+    const {selectedLineIdx,lines} = gMeme
+    
+    lines[selectedLineIdx].txt = txt
+}
+
+function setLineColor(txtColor) {
+    const {selectedLineIdx,lines} = gMeme
+    
+    lines[selectedLineIdx].color = txtColor
+}
+
+
+
+
 
