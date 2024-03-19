@@ -7,7 +7,7 @@ function renderMeme() {
     elImg.src = `imgs/${meme.selectedImgId}.jpg`
 
     gElCanvas.height = (elImg.naturalHeight / elImg.naturalWidth) * gElCanvas.width
-    
+
     elImg.onload = () => {
         gCtx.drawImage(elImg, 0, 0, gElCanvas.width, gElCanvas.height)
         renderCanvasTxt(meme)
@@ -15,7 +15,10 @@ function renderMeme() {
 }
 
 function renderCanvasTxt(meme) {
-    const { txt, size, color } = meme.lines[0]
+    const { selectedLineIdx, lines } = meme
+    let { txt, size, color } = lines[selectedLineIdx]
+    
+    txt==='' ? txt = 'Insert your text here...' : txt
 
     gCtx.font = `${size}px Arial`
     gCtx.fillStyle = `${color}`
@@ -30,6 +33,11 @@ function onTextChange(txt) {
 
 function onChangeTxtColor(txtColor) {
     setLineColor(txtColor)
+    renderMeme()
+}
+
+function onChangeFontSize(fontSize) {
+    setFontSize(fontSize)
     renderMeme()
 }
 

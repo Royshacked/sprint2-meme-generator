@@ -24,8 +24,14 @@ function setLineTxt(txt) {
 
 function setLineColor(txtColor) {
     const {selectedLineIdx,lines} = gMeme
-    
+
     lines[selectedLineIdx].color = txtColor
+}
+
+function setFontSize(fontSize) {
+    const {selectedLineIdx,lines} = gMeme
+
+    lines[selectedLineIdx].size += fontSize
 }
 
 
