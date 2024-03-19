@@ -29,8 +29,8 @@
             <input class="editor-txt-input" type="text" placeholder="Insert text..." oninput="onTextChange(this.value)">
             <section class="editor-controls">
                 <button class="btn-up-dn">up down</button>
-                <button class="btn-add">add</button>
-                <button class="btn-remove">remove</button>
+                <button class="btn-add" onclick="onAddLine()">add</button>
+                <button class="btn-remove" onclick="onRemoveLine()">remove</button>
                 <button class="btn-a+" onclick="onChangeFontSize(+1)">A+</button>
                 <button class="btn-a-" onclick="onChangeFontSize(-1)">A-</button>
                 <button class="btn-ltr">ltr</button>

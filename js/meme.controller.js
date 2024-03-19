@@ -16,14 +16,17 @@ function renderMeme() {
 
 function renderCanvasTxt(meme) {
     const { selectedLineIdx, lines } = meme
-    let { txt, size, color } = lines[selectedLineIdx]
-    
-    txt==='' ? txt = 'Insert your text here...' : txt
 
-    gCtx.font = `${size}px Arial`
-    gCtx.fillStyle = `${color}`
-    gCtx.fillText(txt, 10, 50)
-    gCtx.strokeText(txt, 10, 50)
+    lines.forEach(line => {
+        let { txt, size, color, x, y } = line
+
+        txt === '' ? txt = 'Insert your text here...' : txt
+
+        gCtx.font = `${size}px Arial`
+        gCtx.fillStyle = `${color}`
+        gCtx.fillText(txt, x, y)
+        gCtx.strokeText(txt, x, y)
+    })
 }
 
 function onTextChange(txt) {
@@ -38,6 +41,16 @@ function onChangeTxtColor(txtColor) {
 
 function onChangeFontSize(fontSize) {
     setFontSize(fontSize)
+    renderMeme()
+}
+
+function onAddLine() {
+    addLine()
+    renderMeme()
+}
+
+function onRemoveLine() {
+    removeLine()
     renderMeme()
 }
 
