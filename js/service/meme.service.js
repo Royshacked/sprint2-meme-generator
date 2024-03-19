@@ -1,10 +1,6 @@
 'use strict'
 
-var gMeme = {
-    selectedImgId: 3,
-    selectedLineIdx: 0,
-    lines: [{ txt: 'hello', size: 20, color: 'red' }]
-}
+let gMeme
 
 function getMeme() {
     const meme = gMeme
@@ -20,6 +16,7 @@ function setImg(imgId) {
     gMeme = {
         selectedImgId: imgId,
         selectedLineIdx: 0,
-        lines: [{ txt: 'hello', size: 20, color: 'red' }]
+        lines: [{ txt: 'Insert your text here...', size: 20, color: 'red' }]
     }
 }
+

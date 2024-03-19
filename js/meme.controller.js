@@ -7,7 +7,7 @@ function renderMeme() {
     elImg.src = `imgs/${meme.selectedImgId}.jpg`
 
     gElCanvas.height = (elImg.naturalHeight / elImg.naturalWidth) * gElCanvas.width
-
+    
     elImg.onload = () => {
         gCtx.drawImage(elImg, 0, 0, gElCanvas.width, gElCanvas.height)
         renderCanvasTxt(meme)

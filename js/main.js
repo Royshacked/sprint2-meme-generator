@@ -10,7 +10,6 @@ function onInit() {
     window.addEventListener('resize', () => resizeCanvas())
     window.addEventListener('resize', () => renderMeme())
 
-    renderMeme()
     renderGallery()
     showGallery()
 }
