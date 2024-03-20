@@ -6,6 +6,7 @@
 .main-header .header-logo {
     margin: 0;
     padding: 0.5em;
+
     font-size: 2em;
     font-weight: bold;
 }
@@ -17,7 +18,8 @@
     background-color: var(--primary-bgc-clr);
     color: var(--primary-titles-clr);
 
-    font-size: 1em;
+    font-family: monsterrat;
+    font-size: 2em;
 
     cursor: pointer;
 }

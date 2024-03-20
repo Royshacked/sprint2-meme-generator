@@ -9,21 +9,23 @@
 </head>
 
 <body class="main-layout" onload="onInit()">
-    <header class="main-header full">
-        <h2 class="header-logo">memegen</h2>
-        <nav class="header-nav">
-            <button class="nav-gallery" onclick="showGallery()">Gallery</button>
-            <button class="nav-about">About</button>
-        </nav>
+    <header class="main-header main-layout full">
+        <section class="header">
+            <h2 class="header-logo">memegen</h2>
+            <nav class="header-nav">
+                <button class="nav-gallery" onclick="showGallery()">Gallery</button>
+                <button class="nav-about">About</button>
+            </nav>
+        </section>
     </header>
 
     <main class="main-gallery">
-        
+
     </main>
 
     <main class="main-editor">
         <div class="canvas-container">
-            <canvas class="editor-canvas" height="400" width="400" onclick="onClickLine(event)"></canvas>
+            <canvas class="editor-canvas" height="" width="" onclick="onClickLine(event)"></canvas>
         </div>
         <aside class="editor">
             <input class="editor-txt-input" type="text" placeholder="Insert text..." oninput="onTextChange(this.value)">
@@ -42,7 +44,7 @@
                 <input class="inp-color" type="color" onchange="onChangeTxtColor(this.value)">
                 <nav class="select-icon">icons</nav>
             </section>
-            <a href="#" onclick="onDownload(this)" download="my-meme.jpg">Download</a> 
+            <a href="#" onclick="onDownload(this)" download="my-meme.jpg">Download</a>
         </aside>
     </main>
 
@@ -51,7 +53,7 @@
         <small class="footer-rights">all rights reserved 2024</small>
     </footer>
 
-    
+
     <script src="js/service/meme.service.js"></script>
     <script src="js/service/gallery.service.js"></script>
     <script src="js/meme.controller.js"></script>

@@ -22,7 +22,7 @@ function renderCanvasTxt() {
 
         gCtx.textBaseline = 'top'
         gCtx.lineWidth = 1
-        gCtx.font = `${size}px Arial`
+        gCtx.font = `bold ${size}px  montserrat`
         gCtx.fillStyle = `${color}`
         gCtx.fillText(txt, x, y)
         gCtx.strokeText(txt, x, y)

@@ -13,8 +13,8 @@ function renderGallery() {
 
 function onImgSelect(imgId) {
     setImg(imgId)
-    renderMeme()
     window.addEventListener('resize', () => renderMeme())
+    renderMeme()
     showMeme() 
 }
 

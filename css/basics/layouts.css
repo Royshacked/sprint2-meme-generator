@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns:
         minmax(80px, 1fr) 
-        minmax(auto, 980px) 
+        minmax(auto, 8fr) 
         minmax(80px, 1fr);
 }
 
@@ -14,11 +14,15 @@
     grid-column: 1 /-1;
 }
 
-.main-header {
+
+
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     height: 10vh;
+    
     padding-inline: 1em;
 }
 
@@ -27,7 +31,9 @@
     grid-auto-flow: column;
     justify-content: center;
     gap:10px;
+
     height: 50vh;
+    
     margin-block: 10vh;
 }
 
