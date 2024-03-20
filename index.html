@@ -23,8 +23,7 @@
 
     <main class="main-editor">
         <div class="canvas-container">
-            <canvas class="editor-canvas" height="400" width="400"></canvas>
-            <!-- <canvas class="txt-canvas" height="400" width="400"></canvas> -->
+            <canvas class="editor-canvas" height="400" width="400" onclick="onClickLine(event)"></canvas>
         </div>
         <aside class="editor">
             <input class="editor-txt-input" type="text" placeholder="Insert text..." oninput="onTextChange(this.value)">
@@ -43,8 +42,7 @@
                 <input class="inp-color" type="color" onchange="onChangeTxtColor(this.value)">
                 <nav class="select-icon">icons</nav>
             </section>
-            <a href="#" onclick="onDownload(this)" download="my-meme.jpg">Download</a>
-            
+            <a href="#" onclick="onDownload(this)" download="my-meme.jpg">Download</a> 
         </aside>
     </main>
 

@@ -8,7 +8,6 @@ function onInit() {
     gCtx = gElCanvas.getContext('2d')
 
     window.addEventListener('resize', () => resizeCanvas())
-    window.addEventListener('resize', () => renderMeme())
 
     renderGallery()
     showGallery()

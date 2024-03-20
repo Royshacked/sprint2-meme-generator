@@ -18,6 +18,11 @@ function setImg(imgId) {
     }
 }
 
+function setLineWidth(idx, width) {
+    const { lines } = gMeme
+    lines[idx].width = width
+}
+
 function setLineTxt(txt) {
     const { selectedLineIdx, lines } = gMeme
 
@@ -57,6 +62,21 @@ function switchLine() {
     gMeme.selectedLineIdx++
 
     if (gMeme.selectedLineIdx >= gMeme.lines.length) gMeme.selectedLineIdx = 0
+}
+
+function clickLine(offsetX, offsetY) {
+    const { lines } = gMeme
+
+    const lineIdx = lines.findIndex(line => {
+        const { x, y, size, width } = line
+
+        return (offsetX >= x && offsetX <= x + width &&
+            offsetY >= y && offsetY <= y + size)
+    })
+
+    if (lineIdx < 0) return
+
+    gMeme.selectedLineIdx = lineIdx
 }
 
 
