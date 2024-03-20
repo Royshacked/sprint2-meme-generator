@@ -18,7 +18,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    height: 10vh;
     padding-inline: 1em;
 }
 
@@ -26,6 +26,9 @@
     display: grid;
     grid-auto-flow: column;
     justify-content: center;
+
+    height: 50vh;
+    margin-block: 10vh;
 }
 
 .main-footer {
@@ -34,5 +37,5 @@
     justify-content: center;
     align-items: center;
 
-    height: 200px;
+    height: 20vh;
 }

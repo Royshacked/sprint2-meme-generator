@@ -23,14 +23,21 @@ function renderCanvasTxt() {
 
         txt === '' ? txt = 'Insert your text here...' : txt
 
-        if (idx === selectedLineIdx) {
-            gCtx.fillStyle = "#FDF6F640"
-            gCtx.fillRect(x, y - 20, 200, size+10)
-        }
+        gCtx.textBaseline = 'top'
+        gCtx.lineWidth = 1
         gCtx.font = `${size}px Arial`
         gCtx.fillStyle = `${color}`
         gCtx.fillText(txt, x, y)
         gCtx.strokeText(txt, x, y)
+
+        if (idx === selectedLineIdx) {
+            gCtx.beginPath()
+            gCtx.strokeStyle = '#000000'
+            gCtx.lineWidth = 2
+            gCtx.strokeRect(x-size/2,y-size/2, size+gCtx.measureText(txt).width, 2*size)
+            gCtx.fillStyle = "#FDF6F630"
+            gCtx.fillRect(x-size/2,y-size/2, size+gCtx.measureText(txt).width, 2*size)
+        }
     })
 }
 

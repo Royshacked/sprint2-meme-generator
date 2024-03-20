@@ -13,7 +13,7 @@ function setImg(imgId) {
         selectedImgId: imgId,
         selectedLineIdx: 0,
         lines: [
-            { txt: 'Insert your text here...', size: 20, color: '#000000', x: 10, y: 50 },
+            { txt: 'Insert your text here...', size: 20, color: '#000000', x: 50, y: 50 },
         ]
     }
 }
@@ -22,7 +22,6 @@ function setLineTxt(txt) {
     const { selectedLineIdx, lines } = gMeme
 
     lines[selectedLineIdx].txt = txt
-    console.log(gMeme.lines)
 }
 
 function setLineColor(txtColor) {
@@ -39,22 +38,19 @@ function setFontSize(fontSize) {
 
 function addLine() {
     const { lines } = gMeme
-    if (lines.length > 0) {
-        var { y } = lines[lines.length - 1]
-    } else var y = 50
+    if (lines.length > 0) var { y } = lines[lines.length - 1]
+    else y = 0
 
     lines.push(
-        { txt: 'Insert your text here...', size: 20, color: '#000000', x: 10, y: y + 40 }
+        { txt: 'Insert your text here...', size: 20, color: '#000000', x: 50, y: y + 50 }
     )
 }
 
 function removeLine() {
     const { selectedLineIdx, lines } = gMeme
 
-    lines.pop()
-
-    if (selectedLineIdx > lines.length - 1) gMeme.selectedLineIdx = lines.length - 1
-    if (gMeme.selectedLineIdx < 0) gMeme.selectedLineIdx = 0
+    lines.splice(selectedLineIdx, 1)
+    gMeme.selectedLineIdx = 0
 }
 
 function switchLine() {
