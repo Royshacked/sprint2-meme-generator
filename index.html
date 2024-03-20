@@ -30,30 +30,30 @@
         <aside class="editor">
             <input class="editor-txt-input" type="text" placeholder="Insert text..." oninput="onTextChange(this.value)">
             <section class="editor-controls">
-                <article class="lines-controls">
-                    <button class="btn-up-dn">up down</button>
-                    <button class="btn-add" onclick="onAddLine()">add</button>
-                    <button class="btn-remove" onclick="onRemoveLine()">remove</button>
-                    <button class="btn-switch" onclick="onSwitchLine()">switch</button>
+                <article class="lines-controls flex justify-center align-center">
+                    <button class="controls btn-up-dn">up down</button>
+                    <button class="controls btn-add" onclick="onAddLine()">add</button>
+                    <button class="controls btn-remove" onclick="onRemoveLine()">remove</button>
+                    <button class="controls btn-switch" onclick="onSwitchLine()">switch</button>
                 </article>
 
-                <article class="text-controls">
-                    <button class="btn-a+" onclick="onChangeFontSize(+1)">A+</button>
-                    <button class="btn-a-" onclick="onChangeFontSize(-1)">A-</button>
-                    <button class="btn-ltr">ltr</button>
-                    <button class="btn-center">center</button>
-                    <button class="btn-rtl">rtl</button>
+                <article class="text-controls flex justify-center align-center">
+                    <button class="controls btn-a+" onclick="onChangeFontSize(+1)">A+</button>
+                    <button class="controls btn-a-" onclick="onChangeFontSize(-1)">A-</button>
+                    <button class="controls btn-ltr">ltr</button>
+                    <button class="controls btn-center">center</button>
+                    <button class="controls btn-rtl">rtl</button>
                 </article>
 
-                <article class="font-controls">
+                <article class="font-controls flex justify-center align-center">
                     <input class="inp-impact" type="list" placeholder="impact">
-                    <button class="btn-empty">empty</button>
+                    <button class="controls btn-empty">empty</button>
                     <input class="inp-color" type="color" onchange="onChangeTxtColor(this.value)">
                 </article>
 
                 <nav class="select-icon">icons</nav>
             </section>
-            <a href="#" onclick="onDownload(this)" download="my-meme.jpg">Download</a>
+            <a class="btn-download flex justify-center align-center" href="#" onclick="onDownload(this)" download="my-meme.jpg">Download</a>
         </aside>
     </main>
 
