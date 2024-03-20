@@ -4,6 +4,9 @@
 
 body {
     margin: 0;
+
+    background-color: var(--editor-bgc-clr);
+    
     font-family: montserrat;
     font-size: 1rem;
 

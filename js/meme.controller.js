@@ -22,7 +22,7 @@ function renderCanvasTxt() {
 
         gCtx.textBaseline = 'top'
         gCtx.lineWidth = 1
-        gCtx.font = `bold ${size}px  montserrat`
+        gCtx.font = `bold ${size}px  arial`
         gCtx.fillStyle = `${color}`
         gCtx.fillText(txt, x, y)
         gCtx.strokeText(txt, x, y)
@@ -76,7 +76,7 @@ function onSwitchLine() {
 function onClickLine(ev) {
     const { offsetX, offsetY } = ev
     clearEditInputs()
-    clickLine(offsetX,offsetY)
+    clickLine(offsetX, offsetY)
     renderMeme()
 }
 

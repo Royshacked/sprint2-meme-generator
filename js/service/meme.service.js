@@ -47,7 +47,7 @@ function addLine() {
     else y = 0
 
     lines.push(
-        { txt: 'Insert your text here...', size: 20, color: '#FFFFFF', x: 50, y: y + 50 }
+        { txt: 'Insert your text here...', size: 20, color: '#000000', x: 50, y: y + 50 }
     )
 }
 

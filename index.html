@@ -25,23 +25,32 @@
 
     <main class="main-editor">
         <div class="canvas-container">
-            <canvas class="editor-canvas" height="" width="" onclick="onClickLine(event)"></canvas>
+            <canvas class="editor-canvas" height="450" width="450" onclick="onClickLine(event)"></canvas>
         </div>
         <aside class="editor">
             <input class="editor-txt-input" type="text" placeholder="Insert text..." oninput="onTextChange(this.value)">
             <section class="editor-controls">
-                <button class="btn-up-dn">up down</button>
-                <button class="btn-add" onclick="onAddLine()">add</button>
-                <button class="btn-remove" onclick="onRemoveLine()">remove</button>
-                <button class="btn-switch" onclick="onSwitchLine()">switch</button>
-                <button class="btn-a+" onclick="onChangeFontSize(+1)">A+</button>
-                <button class="btn-a-" onclick="onChangeFontSize(-1)">A-</button>
-                <button class="btn-ltr">ltr</button>
-                <button class="btn-center">center</button>
-                <button class="btn-rtl">rtl</button>
-                <input class="inp-impact" type="list" placeholder="impact">
-                <button class="btn-fill">fill</button>
-                <input class="inp-color" type="color" onchange="onChangeTxtColor(this.value)">
+                <article class="lines-controls">
+                    <button class="btn-up-dn">up down</button>
+                    <button class="btn-add" onclick="onAddLine()">add</button>
+                    <button class="btn-remove" onclick="onRemoveLine()">remove</button>
+                    <button class="btn-switch" onclick="onSwitchLine()">switch</button>
+                </article>
+
+                <article class="text-controls">
+                    <button class="btn-a+" onclick="onChangeFontSize(+1)">A+</button>
+                    <button class="btn-a-" onclick="onChangeFontSize(-1)">A-</button>
+                    <button class="btn-ltr">ltr</button>
+                    <button class="btn-center">center</button>
+                    <button class="btn-rtl">rtl</button>
+                </article>
+
+                <article class="font-controls">
+                    <input class="inp-impact" type="list" placeholder="impact">
+                    <button class="btn-empty">empty</button>
+                    <input class="inp-color" type="color" onchange="onChangeTxtColor(this.value)">
+                </article>
+
                 <nav class="select-icon">icons</nav>
             </section>
             <a href="#" onclick="onDownload(this)" download="my-meme.jpg">Download</a>
