@@ -93,6 +93,7 @@ function onSaveMeme() {
 
 function showMeme() {
     document.querySelector('.main-editor').classList.remove('hidden')
+    // document.querySelector('.main-saved').classList.add('hidden')
     document.querySelector('.main-gallery').classList.add('hidden')
     clearEditInputs()
 }

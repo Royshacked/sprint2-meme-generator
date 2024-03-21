@@ -14,7 +14,7 @@
             <h2 class="header-logo">memegen</h2>
             <nav class="header-nav">
                 <button class="nav-gallery" onclick="showGallery()">Gallery</button>
-                <button class="nav-saved">Saved</button>
+                <!-- <button class="nav-saved" onclick="showSaved()">Saved</button> -->
             </nav>
         </section>
     </header>
@@ -53,7 +53,7 @@
                             src="ICONS/increase font - icon.png" alt=""></button>
                     <button class="controls btn-a-" onclick="onChangeFontSize(-1)"><img
                             src="ICONS/decrease font - icon.png" alt=""></button>
-                    <button class="controls btn-ltr"><img src="ICONS/align-to-left.png" alt=""></button>
+                    <button class="controls btn-ltr "><img src="ICONS/align-to-left.png" alt=""></button>
                     <button class="controls btn-center"><img src="ICONS/center-text-alignment.png" alt=""></button>
                     <button class="controls btn-rtl"><img src="ICONS/align-to-right.png" alt=""></button>
                 </article>
@@ -78,6 +78,10 @@
         </aside>
     </main>
 
+    <main class="main-saved">
+
+    </main>
+
     <footer class="main-footer full">
         <h2 class="footer-logo">memegen</h2>
         <small class="footer-rights">all rights reserved 2024</small>
@@ -87,8 +91,10 @@
     <script src="js/service/localstorage.service.js"></script>
     <script src="js/service/utils.service.js"></script>
     <script src="js/service/meme.service.js"></script>
+    <!-- <script src="js/service/saved.service.js"></script> -->
     <script src="js/service/gallery.service.js"></script>
     <script src="js/meme.controller.js"></script>
+    <!-- <script src="js/saved.controller.js"></script> -->
     <script src="js/gallery.controller.js"></script>
     <script src="js/main.js"></script>
 </body>
