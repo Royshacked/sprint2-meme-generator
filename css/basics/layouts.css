@@ -1,9 +1,9 @@
 .main-layout {
     display: grid;
     grid-template-columns:
-        minmax(80px, 1fr) 
-        minmax(auto, 20fr) 
-        minmax(80px, 1fr);
+        minmax(20px, 1fr) 
+        minmax(auto, 10fr) 
+        minmax(20px, 1fr);
 }
 
 .main-layout > *:not(.full) {
@@ -28,7 +28,7 @@
     display: grid;
     grid-auto-flow: column;
     justify-content: center;
-    gap:5vw;
+    gap:2vw;
 
     height: 65vh;
     
@@ -44,6 +44,14 @@
     align-items: center;
 
     width: 100%;
+}
+
+.editor-controls {
+    display: grid;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .main-footer {

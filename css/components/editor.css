@@ -10,7 +10,7 @@
 }
 
 .editor-txt-input {
-    width: 80%;
+    width: 100%;
 
     margin-block-end: 20px;
     padding: 0.8em;
@@ -18,6 +18,17 @@
     border-radius: 0.5em;
 
     font-size: 1.5em;
+}
+
+.editor-controls {
+    width: 100%;
+}
+
+.lines-controls {
+    width: 100%;
+
+    margin-block-end: 40px;
+
 }
 
 .controls  {
@@ -28,22 +39,30 @@
     border-radius: 0.5em;
 
     background-color: #fff;
-}
 
-.lines-controls {
-    margin-block-end: 40px;
+    cursor: pointer;
 }
 
 .text-controls {
+    gap:20px;
+    width: 100%;
+
     margin-block-end: 20px;
 }
 
+.select-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .btn-download {
     width: 100px;
     height: 50px;
 
     border-radius: 0.5em;
+
     background-color: var(--primary-bgc-clr);
+    color: var(--primary-titles-clr);
     text-decoration: none;
 }
 
