@@ -11,3 +11,8 @@ body {
     font-size: 1rem;
 
 }
+
+img {
+    display: block;
+    width: 100%;
+}
