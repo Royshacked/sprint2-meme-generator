@@ -27,7 +27,8 @@
 }
 
 .gallery-keywords {
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
     justify-content: center;
     gap: 4em;
 

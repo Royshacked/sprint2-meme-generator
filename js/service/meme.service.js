@@ -1,6 +1,7 @@
 'use strict'
 
 let gMeme
+let gSavedMemes = []
 
 function getMeme() {
     const meme = gMeme
@@ -80,7 +81,18 @@ function clickLine(offsetX, offsetY) {
 }
 
 function saveMeme() {
+    const {selectedImgId} = gMeme
 
+    const savedMemeIdx = gSavedMemes.findIndex(meme=> meme.selectedImgId===selectedImgId)
+    
+    savedMemeIdx===-1? gSavedMemes.push(gMeme) : gSavedMemes[savedMemeIdx] = gMeme
+    
+    saveToLocalStorage('memes', gSavedMemes)
+}
+
+function saveToLocalStorage(key, val) {
+    const valStr = JSON.stringify(val)
+    localStorage.setItem(key,valStr)
 }
 
 

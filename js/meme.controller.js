@@ -35,7 +35,7 @@ function renderCanvasTxt() {
 
 function renderTxtFrame(txt, size, color, x, y) {
     gCtx.beginPath()
-    gCtx.strokeStyle = `${color}`
+    gCtx.strokeStyle = `#000000`
     gCtx.lineWidth = 2
     gCtx.strokeRect(x - size / 2, y - size / 2, size + gCtx.measureText(txt).width, 2 * size)
     gCtx.fillStyle = "#FDF6F630"
