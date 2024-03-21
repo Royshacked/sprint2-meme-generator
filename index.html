@@ -14,7 +14,7 @@
             <h2 class="header-logo">memegen</h2>
             <nav class="header-nav">
                 <button class="nav-gallery" onclick="showGallery()">Gallery</button>
-                <button class="nav-about">About</button>
+                <button class="nav-saved">Saved</button>
             </nav>
         </section>
     </header>
@@ -25,7 +25,7 @@
 
     <main class="main-editor">
         <div class="canvas-container">
-            <canvas class="editor-canvas" height="450" width="450" onclick="onClickLine(event)"></canvas>
+            <canvas class="editor-canvas" height="300" width="300" onclick="onClickLine(event)"></canvas>
         </div>
         <aside class="editor">
             <input class="editor-txt-input" type="text" placeholder="Insert text..." oninput="onTextChange(this.value)">
@@ -53,7 +53,12 @@
 
                 <nav class="select-icon">icons</nav>
             </section>
-            <a class="btn-download flex justify-center align-center" href="#" onclick="onDownload(this)" download="my-meme.jpg">Download</a>
+
+            <section class="editor-files flex justify-center align-center">
+                <a class="btn-download flex justify-center align-center" href="#" onclick="onDownloadMeme(this)"
+                    download="my-meme.jpg">Download</a>
+                <button class="btn-save flex justify-center align-center" onclick="onSaveMeme()">Save</button>
+            </section>
         </aside>
     </main>
 

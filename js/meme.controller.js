@@ -81,10 +81,14 @@ function onClickLine(ev) {
 }
 
 
-function onDownload(elLink) {
+function onDownloadMeme(elLink) {
     const dataUrl = gElCanvas.toDataURL()
 
     elLink.href = dataUrl
+}
+
+function onSaveMeme() {
+    saveMeme()
 }
 
 function showMeme() {

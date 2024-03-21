@@ -79,6 +79,10 @@ function clickLine(offsetX, offsetY) {
     gMeme.selectedLineIdx = lineIdx
 }
 
+function saveMeme() {
+
+}
+
 
 
 

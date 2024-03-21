@@ -1,17 +1,5 @@
 .main-layout {
     display: grid;
-    grid-template-columns:
-        minmax(20px, 1fr) 
-        minmax(auto, 10fr) 
-        minmax(20px, 1fr);
-}
-
-.main-layout > *:not(.full) {
-    grid-column: 2;
-}
-
-.main-layout > *.full {
-    grid-column: 1 /-1;
 }
 
 .header {
@@ -26,21 +14,21 @@
 
 .main-editor {
     display: grid;
-    grid-auto-flow: column;
+    grid-auto-flow: row;
     justify-content: center;
-    gap:2vw;
+    align-items: center;
+    height: 80vh;
+}
 
-    height: 65vh;
-    
-    margin-block: 5vh;
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .editor {
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: top;
+    display: grid;
+    justify-content: center;
     align-items: center;
 
     width: 100%;
@@ -60,5 +48,5 @@
     justify-content: center;
     align-items: center;
 
-    height: 15vh;
+    height: 10vh;
 }

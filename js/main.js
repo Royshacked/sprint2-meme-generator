@@ -7,9 +7,9 @@ function onInit() {
     gElCanvas = document.querySelector('canvas')
     gCtx = gElCanvas.getContext('2d')
 
-    resizeCanvas()
+    // resizeCanvas()
     
-    window.addEventListener('resize', () => resizeCanvas())
+    // window.addEventListener('resize', () => resizeCanvas())
 
     renderGallery()
     showGallery()
