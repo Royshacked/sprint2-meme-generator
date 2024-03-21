@@ -12,6 +12,37 @@
     padding-inline: 1em;
 }
 
+.main-gallery {
+    display: grid;
+    height: 80vh;
+}
+
+.gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+
+    padding-inline: 2em;
+}
+
+.gallery-keywords {
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+
+    padding-inline: 2em;
+}
+
+.img-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    grid-auto-flow: dense;
+    gap:10px;
+
+    max-height: 100%;
+}
+
 .main-editor {
     display: grid;
     grid-auto-flow: row;
@@ -41,6 +72,7 @@
 }
 
 .main-footer {
+    
     display: flex;
     flex-direction: column;
     justify-content: center;

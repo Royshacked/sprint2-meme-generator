@@ -9,7 +9,7 @@
 </head>
 
 <body class="main-layout" onload="onInit()">
-    <header class="main-header main-layout full">
+    <header class="main-header">
         <section class="header">
             <h2 class="header-logo">memegen</h2>
             <nav class="header-nav">
@@ -20,7 +20,17 @@
     </header>
 
     <main class="main-gallery">
-
+        <section class="gallery-header">
+            <input class="gallery-search" type="search" placeholder="👀" oninput="onSearchChange(this.value)">
+            <ul class="gallery-keywords">
+                <li class="funny">funny</li>
+                <li class="comics">comics</li>
+                <li class="dogs">dogs</li>
+                <li class="drinks">drinks</li>
+                <li class="books">books</li>
+            </ul>
+        </section>
+        <section class="img-container"></section>
     </main>
 
     <main class="main-editor">
@@ -32,20 +42,23 @@
             <section class="editor-controls">
                 <article class="lines-controls flex justify-center align-center">
                     <button class="controls btn-add" onclick="onAddLine()"><img src="ICONS/add.png" alt=""></button>
-                    <button class="controls btn-remove" onclick="onRemoveLine()"><img src="ICONS/trash.png" alt=""></button>
-                    <button class="controls btn-switch" onclick="onSwitchLine()"><img src="ICONS/up-and-down-opposite-double-arrows-side-by-side.png" alt=""></button>
+                    <button class="controls btn-remove" onclick="onRemoveLine()"><img src="ICONS/trash.png"
+                            alt=""></button>
+                    <button class="controls btn-switch" onclick="onSwitchLine()"><img
+                            src="ICONS/up-and-down-opposite-double-arrows-side-by-side.png" alt=""></button>
                 </article>
 
                 <article class="text-controls flex justify-center align-center">
-                    <button class="controls btn-a+" onclick="onChangeFontSize(+1)"><img src="ICONS/increase font - icon.png" alt=""></button>
-                    <button class="controls btn-a-" onclick="onChangeFontSize(-1)"><img src="ICONS/decrease font - icon.png" alt=""></button>
+                    <button class="controls btn-a+" onclick="onChangeFontSize(+1)"><img
+                            src="ICONS/increase font - icon.png" alt=""></button>
+                    <button class="controls btn-a-" onclick="onChangeFontSize(-1)"><img
+                            src="ICONS/decrease font - icon.png" alt=""></button>
                     <button class="controls btn-ltr"><img src="ICONS/align-to-left.png" alt=""></button>
                     <button class="controls btn-center"><img src="ICONS/center-text-alignment.png" alt=""></button>
                     <button class="controls btn-rtl"><img src="ICONS/align-to-right.png" alt=""></button>
                 </article>
 
                 <article class="font-controls flex justify-center align-center">
-                    <!-- <select class="inp-font-familly" type="list" placeholder="Font familly"> -->
                     <select name="" id="" class="font-familly">
                         <option value="">Select Font familly</option>
                         <option value="arial">Arial</option>
@@ -55,8 +68,6 @@
                     <button class="controls btn-empty"><img src="ICONS/text stroke.png" alt=""></button>
                     <input class="inp-color" type="color" onchange="onChangeTxtColor(this.value)">
                 </article>
-
-                <!-- <nav class="select-icon">icons</nav> -->
             </section>
 
             <section class="editor-files flex justify-center align-center">

@@ -3,6 +3,8 @@
 }
 
 body {
+    min-height: 100vh;
+
     margin: 0;
 
     background-color: var(--editor-bgc-clr);
@@ -15,4 +17,8 @@ body {
 img {
     display: block;
     width: 100%;
+}
+
+li {
+    list-style: none;
 }
