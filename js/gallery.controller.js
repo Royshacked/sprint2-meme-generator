@@ -1,9 +1,9 @@
-'use strict' 
+'use strict'
 
-function renderGallery() {
-    const imgs = getImgs()
-
-    const strHtml = imgs.map(({id,url}) => `
+function renderGallery(filterBy) {
+    const imgs = getImgs(filterBy)
+    
+    const strHtml = imgs.map(({ id, url }) => `
         <img class="gallery-img-${id}" src="${url}" onclick="onImgSelect(${id})">
     `).join('')
 
@@ -13,9 +13,24 @@ function renderGallery() {
 
 function onImgSelect(imgId) {
     setImg(imgId)
-    window.addEventListener('resize', () => renderMeme())
     renderMeme()
-    showMeme() 
+    showMeme()
+}
+
+function renderKeyWords() {
+    const keyWordsMap = getKeyWordsMap()
+
+    const keyWords = document.querySelectorAll('li')
+
+    keyWords.forEach(keyWord => {
+        keyWord.style.fontSize = keyWordsMap[keyWord.innerText] + 'px'
+    })
+}
+
+function onClickKeyWord(filterBy) {
+    updateKeyWords(filterBy)
+    renderGallery(filterBy)
+    renderKeyWords(filterBy)
 }
 
 function showGallery() {

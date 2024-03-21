@@ -90,10 +90,6 @@ function saveMeme() {
     saveToLocalStorage('memes', gSavedMemes)
 }
 
-function saveToLocalStorage(key, val) {
-    const valStr = JSON.stringify(val)
-    localStorage.setItem(key,valStr)
-}
 
 
 

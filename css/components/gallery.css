@@ -2,7 +2,7 @@
     background-color: var(--primary-titles-clr);
 }
 
-.gallery-search {
-    border: 0;
-    border-block-end:1px solid black;
+.gallery-keywords > li {
+   cursor: pointer; 
 }
+

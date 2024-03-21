@@ -21,13 +21,12 @@
 
     <main class="main-gallery">
         <section class="gallery-header">
-            <input class="gallery-search" type="search" placeholder="👀" oninput="onSearchChange(this.value)">
             <ul class="gallery-keywords">
-                <li class="funny">funny</li>
-                <li class="comics">comics</li>
-                <li class="dogs">dogs</li>
-                <li class="drinks">drinks</li>
-                <li class="books">books</li>
+                <li class="funny" onclick="onClickKeyWord('funny')">funny</li>
+                <li class="comics" onclick="onClickKeyWord('comics')">comics</li>
+                <li class="dogs" onclick="onClickKeyWord('dogs')">dogs</li>
+                <li class="drinks" onclick="onClickKeyWord('drinks')">drinks</li>
+                <li class="books" onclick="onClickKeyWord('books')">books</li>
             </ul>
         </section>
         <section class="img-container"></section>
@@ -85,6 +84,7 @@
 
 
     <script src="js/service/localstorage.service.js"></script>
+    <script src="js/service/utils.service.js"></script>
     <script src="js/service/meme.service.js"></script>
     <script src="js/service/gallery.service.js"></script>
     <script src="js/meme.controller.js"></script>
