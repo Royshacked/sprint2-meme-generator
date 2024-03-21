@@ -4,8 +4,10 @@ var gImgs = [
 
 createGallery()
 
-function getImgs() {
-    const imgs = gImgs
+function getImgs(filterBy) {
+    if(!filterBy) return gImgs
+    
+    const imgs = gImgs.filter(img => img.keyWords.find(keyWord => keyWord===filterBy))
     return imgs
 }
 
@@ -15,7 +17,7 @@ function createImg({id,url,keyWords}) {
         {
            id: id,
            url: `imgs/${id}.jpg`, 
-           keyWords: ['funny', 'dog']
+           keyWords: ['funny', 'dogs']
         }
     )
 }

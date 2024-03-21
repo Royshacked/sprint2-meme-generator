@@ -12,6 +12,7 @@ function onInit() {
     // window.addEventListener('resize', () => resizeCanvas())
 
     renderGallery()
+    renderKeyWords()
     showGallery()
 }
 
