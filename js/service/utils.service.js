@@ -1,5 +1,6 @@
 'use strict'
 
+<<<<<<< HEAD
 function getRandomIntInc(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -17,3 +18,5 @@ function getRandomWords() {
 
     return keyWords
 }
+=======
+>>>>>>> ab294bd95cdd4e22e6b017fea825d22876e22559

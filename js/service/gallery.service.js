@@ -26,7 +26,11 @@ function createImg({id}) {
         {
            id: id,
            url: `imgs/${id}.jpg`, 
+<<<<<<< HEAD
            keyWords: getRandomWords()
+=======
+           keyWords: ['funny', 'dogs']
+>>>>>>> ab294bd95cdd4e22e6b017fea825d22876e22559
         }
     )
 }
