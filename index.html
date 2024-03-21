@@ -25,7 +25,7 @@
 
     <main class="main-editor">
         <div class="canvas-container">
-            <canvas class="editor-canvas" height="300" width="300" onclick="onClickLine(event)"></canvas>
+            <canvas class="editor-canvas" height="320" width="320" onclick="onClickLine(event)"></canvas>
         </div>
         <aside class="editor">
             <input class="editor-txt-input" type="text" placeholder="Insert text..." oninput="onTextChange(this.value)">
@@ -46,12 +46,18 @@
                 </article>
 
                 <article class="font-controls flex justify-center align-center">
-                    <input class="inp-impact" type="list" placeholder="impact">
+                    <!-- <select class="inp-font-familly" type="list" placeholder="Font familly"> -->
+                    <select name="" id="" class="font-familly">
+                        <option value="">Select Font familly</option>
+                        <option value="arial">Arial</option>
+                        <option value="monospace">Monospace</option>
+                    </select>
+
                     <button class="controls btn-empty">empty</button>
                     <input class="inp-color" type="color" onchange="onChangeTxtColor(this.value)">
                 </article>
 
-                <nav class="select-icon">icons</nav>
+                <!-- <nav class="select-icon">icons</nav> -->
             </section>
 
             <section class="editor-files flex justify-center align-center">
