@@ -3,16 +3,12 @@
 function renderMeme() {
     const meme = getMeme()
     const elImg = document.querySelector(`.gallery-img-${meme.selectedImgId}`)
-    
-    gElCanvas.height = (elImg.naturalHeight / elImg.naturalWidth) * gElCanvas.width
 
-    gCtx.drawImage(elImg, 0, 0, gElCanvas.width, gElCanvas.height)
-
-    renderCanvasTxt()
+    drawImgOnCanvas(gElCanvas, gCtx, elImg)
+    renderCanvasTxt(meme, gCtx)
 }
 
-function renderCanvasTxt() {
-    const meme = getMeme()
+function renderCanvasTxt(meme, ctx) {
     const { selectedLineIdx, lines } = meme
 
     lines.forEach((line, idx) => {
@@ -20,26 +16,26 @@ function renderCanvasTxt() {
 
         txt === '' ? txt = 'Insert your text here...' : txt
 
-        gCtx.textBaseline = 'top'
-        gCtx.lineWidth = 1
-        gCtx.font = `bold ${size}px  arial`
-        gCtx.fillStyle = `${color}`
-        gCtx.fillText(txt, x, y)
-        gCtx.strokeText(txt, x, y)
+        ctx.textBaseline = 'top'
+        ctx.lineWidth = 1
+        ctx.font = `bold ${size}px  arial`
+        ctx.fillStyle = `${color}`
+        ctx.fillText(txt, x, y)
+        ctx.strokeText(txt, x, y)
 
-        setLineWidth(idx, gCtx.measureText(txt).width)
+        setLineWidth(meme, idx, ctx.measureText(txt).width)
 
-        if (idx === selectedLineIdx) renderTxtFrame(txt, size, color, x, y)
+        if (idx === selectedLineIdx) renderTxtFrame(ctx, txt, size, color, x, y)
     })
 }
 
-function renderTxtFrame(txt, size, color, x, y) {
-    gCtx.beginPath()
-    gCtx.strokeStyle = `#000000`
-    gCtx.lineWidth = 2
-    gCtx.strokeRect(x - size / 2, y - size / 2, size + gCtx.measureText(txt).width, 2 * size)
-    gCtx.fillStyle = "#FDF6F630"
-    gCtx.fillRect(x - size / 2, y - size / 2, size + gCtx.measureText(txt).width, 2 * size)
+function renderTxtFrame(ctx, txt, size, color, x, y) {
+    ctx.beginPath()
+    ctx.strokeStyle = `#000000`
+    ctx.lineWidth = 2
+    ctx.strokeRect(x - size / 2, y - size / 2, size + ctx.measureText(txt).width, 2 * size)
+    ctx.fillStyle = "#FDF6F630"
+    ctx.fillRect(x - size / 2, y - size / 2, size + ctx.measureText(txt).width, 2 * size)
 }
 
 function onTextChange(txt) {
@@ -93,7 +89,7 @@ function onSaveMeme() {
 
 function showMeme() {
     document.querySelector('.main-editor').classList.remove('hidden')
-    // document.querySelector('.main-saved').classList.add('hidden')
+    document.querySelector('.main-saved').classList.add('hidden')
     document.querySelector('.main-gallery').classList.add('hidden')
     clearEditInputs()
 }

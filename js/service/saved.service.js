@@ -1,8 +1,9 @@
 'use strict'
 
-// function getSavedMemes() {
-//     const savedMemes = loadFromLocalStorage('memes')
-
-//     return savedMemes
-// }
+function getSavedMemes() {
+    let savedMemes = loadFromLocalStorage('memes')
+    !savedMemes||savedMemes.length===0 ? savedMemes = gSavedMemes : savedMemes
+    
+    return savedMemes
+}
 

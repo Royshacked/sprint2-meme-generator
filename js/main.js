@@ -14,7 +14,6 @@ function onInit() {
     
     renderGallery()
     renderKeyWords()
-    renderMeme()
     showGallery()
 }
 

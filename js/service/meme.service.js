@@ -3,8 +3,6 @@
 let gMeme
 let gSavedMemes = []
 
-
-
 function getMeme() {
     const meme = gMeme
 
@@ -21,8 +19,14 @@ function setImg(imgId) {
     }
 }
 
-function setLineWidth(idx, width) {
-    const { lines } = gMeme
+function setSavedImg(imgId) {
+    const savedMemes = getSavedMemes() 
+    console.log(savedMemes)
+    console.log(savedMemes.find(savedMeme => savedMeme.selectedImgId = imgId))
+}
+
+function setLineWidth(meme, idx, width) {
+    const { lines } = meme
     lines[idx].width = width
 }
 
@@ -83,13 +87,14 @@ function clickLine(offsetX, offsetY) {
 }
 
 function saveMeme() {
+    const savedMemes = getSavedMemes()
     const {selectedImgId} = gMeme
 
-    const savedMemeIdx = gSavedMemes.findIndex(meme=> meme.selectedImgId===selectedImgId)
+    const savedMemeIdx = savedMemes.findIndex(meme=> meme.selectedImgId===selectedImgId)
     
-    savedMemeIdx===-1? gSavedMemes.push(gMeme) : gSavedMemes[savedMemeIdx] = gMeme
+    savedMemeIdx===-1 ? savedMemes.push(gMeme) : savedMemes[savedMemeIdx] = gMeme
     
-    saveToLocalStorage('memes', gSavedMemes)
+    saveToLocalStorage('memes', savedMemes)
 }
 
 

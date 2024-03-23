@@ -14,7 +14,7 @@ function getImgs(filterBy) {
 }
 
 function getKeyWordsMap() {
-    const keyWordsMap = loadFromLocalStorage('keywords')
+    let keyWordsMap = loadFromLocalStorage('keywords')
     if(!keyWordsMap) keyWordsMap = gKeywordsCountMap
 
     return keyWordsMap
