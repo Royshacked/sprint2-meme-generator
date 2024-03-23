@@ -8,13 +8,16 @@
     <title>Meme generator</title>
 </head>
 
-<body class="main-layout" onload="onInit()">
+<body class="main-layout " onload="onInit()">
+
+    <div class="main-screen" onclick="toggleMenu()"></div>
     <header class="main-header">
         <section class="header">
             <h2 class="header-logo">memegen</h2>
+            <button class="toggle-menu" onclick="toggleMenu()">☰</button>
             <nav class="header-nav">
                 <button class="nav-gallery" onclick="showGallery()">Gallery</button>
-                <!-- <button class="nav-saved" onclick="showSaved()">Saved</button> -->
+                <button class="nav-saved" onclick="showSaved()">Saved</button>
             </nav>
         </section>
     </header>

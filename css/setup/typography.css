@@ -2,3 +2,12 @@
     font-family: montserrat;
     src: url(/fonts/Montserrat-VariableFont_wght.ttf)
 }
+@font-face {
+    font-family: fa;
+    src: url(/fonts/fa-solid-900.ttf)
+}
+
+/* .bar::before {
+    content: "\f0c9";
+} */
+

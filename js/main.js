@@ -21,3 +21,7 @@ function resizeCanvas() {
 
     gElCanvas.width = elContainer.clientWidth
 }
+
+function toggleMenu() {
+    document.body.classList.toggle('menu-open')
+}
