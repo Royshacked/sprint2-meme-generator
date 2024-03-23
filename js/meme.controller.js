@@ -3,7 +3,7 @@
 function renderMeme() {
     const meme = getMeme()
     const elImg = document.querySelector(`.gallery-img-${meme.selectedImgId}`)
-
+    
     gElCanvas.height = (elImg.naturalHeight / elImg.naturalWidth) * gElCanvas.width
 
     gCtx.drawImage(elImg, 0, 0, gElCanvas.width, gElCanvas.height)
