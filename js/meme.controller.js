@@ -2,6 +2,7 @@
 
 function renderMeme() {
     const meme = getMeme()
+    if(!meme) return
     const elImg = document.querySelector(`.gallery-img-${meme.selectedImgId}`)
 
     drawImgOnCanvas(gElCanvas, gCtx, elImg)

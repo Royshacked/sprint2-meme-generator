@@ -2,6 +2,7 @@
 
 function renderSavedMemes() {
     const savedMemes = getSavedMemes()
+    
     createCanvasEl(savedMemes)
     renderSaved(savedMemes)
 }

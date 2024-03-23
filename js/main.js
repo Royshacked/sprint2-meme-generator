@@ -2,6 +2,7 @@
 
 let gElCanvas
 let gCtx
+let isResizing = false
 
 function onInit() {
     gElCanvas = document.querySelector('canvas')
@@ -9,8 +10,10 @@ function onInit() {
 
     resizeCanvas()
     
-    window.addEventListener('resize', () => resizeCanvas())
-    window.addEventListener('resize', () => renderMeme())
+    window.addEventListener('resize', () => {
+        resizeCanvas()
+        renderMeme()
+    })
     
     renderGallery()
     renderKeyWords()
@@ -23,6 +26,7 @@ function resizeCanvas() {
     gElCanvas.width = elContainer.clientWidth
     
 }
+
 
 function toggleMenu() {
     document.body.classList.toggle('menu-open')
