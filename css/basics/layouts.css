@@ -73,15 +73,29 @@
     justify-content: center;
     align-items:center;
 
+    height: 40vw;
     width: 40vw;
 }
 
 .editor-controls {
     display: grid;
     grid-auto-flow: row;
-    justify-content: start;
-    align-items: start;
+    justify-content: center;
+    align-items: center;
+}
 
+.lines-controls {
+    display: flex;
+    justify-content: space-between;
+    gap:1em;
+
+    margin-block-end: 20px;
+}
+
+.color-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-footer {
@@ -186,6 +200,7 @@
         justify-content: center;
         align-items: center;
 
+        height: 300px;
         width: 300px;
     }
 }

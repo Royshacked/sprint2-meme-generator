@@ -43,7 +43,7 @@
         <aside class="editor">
             <input class="editor-txt-input" type="text" placeholder="Insert text..." oninput="onTextChange(this.value)">
             <section class="editor-controls">
-                <article class="lines-controls flex justify-center align-center">
+                <article class="lines-controls">
                     <button class="controls btn-add" onclick="onAddLine()"><img src="ICONS/add.png" alt=""></button>
                     <button class="controls btn-remove" onclick="onRemoveLine()"><img src="ICONS/trash.png"
                             alt=""></button>
@@ -56,21 +56,12 @@
                             src="ICONS/increase font - icon.png" alt=""></button>
                     <button class="controls btn-a-" onclick="onChangeFontSize(-1)"><img
                             src="ICONS/decrease font - icon.png" alt=""></button>
-                    <button class="controls btn-ltr "><img src="ICONS/align-to-left.png" alt=""></button>
-                    <button class="controls btn-center"><img src="ICONS/center-text-alignment.png" alt=""></button>
-                    <button class="controls btn-rtl"><img src="ICONS/align-to-right.png" alt=""></button>
                 </article>
 
-                <article class="font-controls flex justify-center align-center">
-                    <select name="" id="" class="font-familly">
-                        <option value="">Select Font familly</option>
-                        <option value="arial">Arial</option>
-                        <option value="monospace">Monospace</option>
-                    </select>
-
-                    <button class="controls btn-empty"><img src="ICONS/text stroke.png" alt=""></button>
+                <article class="color-control">
                     <input class="inp-color" type="color" onchange="onChangeTxtColor(this.value)">
                 </article>
+
             </section>
 
             <section class="editor-files flex justify-center align-center">

@@ -21,8 +21,8 @@ function setImg(imgId) {
 
 function setSavedImg(imgId) {
     const savedMemes = getSavedMemes() 
-    console.log(savedMemes)
-    console.log(savedMemes.find(savedMeme => savedMeme.selectedImgId = imgId))
+    
+    gMeme = savedMemes.find(savedMeme => savedMeme.selectedImgId = imgId)
 }
 
 function setLineWidth(meme, idx, width) {
