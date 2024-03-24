@@ -2,7 +2,7 @@
 
 function renderMeme() {
     const meme = getMeme()
-    if(!meme) return
+    if (!meme) return
     const elImg = document.querySelector(`.gallery-img-${meme.selectedImgId}`)
 
     drawImgOnCanvas(gElCanvas, gCtx, elImg)
@@ -26,17 +26,17 @@ function renderCanvasTxt(meme, ctx) {
 
         setLineWidth(meme, idx, ctx.measureText(txt).width)
 
-        if (idx === selectedLineIdx) renderTxtFrame(ctx, txt, size, color, x, y)
+        if (idx === selectedLineIdx && ctx === gCtx) renderTxtFrame(txt, size, x, y)
     })
 }
 
-function renderTxtFrame(ctx, txt, size, color, x, y) {
-    ctx.beginPath()
-    ctx.strokeStyle = `#000000`
-    ctx.lineWidth = 2
-    ctx.strokeRect(x - size / 2, y - size / 2, size + ctx.measureText(txt).width, 2 * size)
-    ctx.fillStyle = "#FDF6F630"
-    ctx.fillRect(x - size / 2, y - size / 2, size + ctx.measureText(txt).width, 2 * size)
+function renderTxtFrame(txt, size, x, y) {
+    gCtx.beginPath()
+    gCtx.strokeStyle = `#000000`
+    gCtx.lineWidth = 2
+    gCtx.strokeRect(x - size / 2, y - size / 2, size + gCtx.measureText(txt).width, 2 * size)
+    gCtx.fillStyle = "#FDF6F630"
+    gCtx.fillRect(x - size / 2, y - size / 2, size + gCtx.measureText(txt).width, 2 * size)
 }
 
 function onTextChange(txt) {
@@ -57,24 +57,27 @@ function onChangeFontSize(fontSize) {
 function onAddLine() {
     addLine()
     renderMeme()
+    clearEditInputs()
 }
 
 function onRemoveLine() {
+    clearEditInputs()
     removeLine()
     renderMeme()
 }
 
 function onSwitchLine() {
-    clearEditInputs()
     switchLine()
     renderMeme()
+    clearEditInputs()
 }
 
 function onClickLine(ev) {
     const { offsetX, offsetY } = ev
-    clearEditInputs()
+
     clickLine(offsetX, offsetY)
     renderMeme()
+    clearEditInputs()
 }
 
 

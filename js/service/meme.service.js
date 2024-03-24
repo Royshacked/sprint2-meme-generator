@@ -31,7 +31,8 @@ function setLineWidth(meme, idx, width) {
 
 function setLineTxt(txt) {
     const { selectedLineIdx, lines } = gMeme
-
+    if(lines.length===0) return
+    
     lines[selectedLineIdx].txt = txt
 }
 
