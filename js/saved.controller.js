@@ -30,8 +30,9 @@ function renderSaved(savedMemes) {
 
 function onSavedImgSelect(imgId) {
     setSavedImg(imgId)
-    renderMeme()
     showMeme()
+    resizeCanvas()
+    renderMeme()
 }
 
 function showSaved() {

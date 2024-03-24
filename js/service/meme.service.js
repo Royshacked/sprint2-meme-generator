@@ -32,7 +32,7 @@ function setLineWidth(meme, idx, width) {
 function setLineTxt(txt) {
     const { selectedLineIdx, lines } = gMeme
     if(lines.length===0) return
-    
+
     lines[selectedLineIdx].txt = txt
 }
 
@@ -86,16 +86,7 @@ function clickLine(offsetX, offsetY) {
     gMeme.selectedLineIdx = lineIdx
 }
 
-function saveMeme() {
-    const savedMemes = getSavedMemes()
-    const {selectedImgId} = gMeme
 
-    const savedMemeIdx = savedMemes.findIndex(meme=> meme.selectedImgId===selectedImgId)
-    
-    savedMemeIdx===-1 ? savedMemes.push(gMeme) : savedMemes[savedMemeIdx] = gMeme
-    
-    saveToLocalStorage('memes', savedMemes)
-}
 
 
 
