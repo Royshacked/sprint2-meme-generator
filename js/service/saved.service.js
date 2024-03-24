@@ -2,7 +2,7 @@
 
 function getSavedMemes() {
     let savedMemes = loadFromLocalStorage('memes')
-    // !savedMemes||savedMemes.length===0 ? savedMemes = gSavedMemes : savedMemes
+    if(!savedMemes||savedMemes.length===0) return
     
     return savedMemes
 }
