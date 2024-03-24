@@ -4,9 +4,15 @@ function renderMeme() {
     const meme = getMeme()
     if (!meme) return
     const elImg = document.querySelector(`.gallery-img-${meme.selectedImgId}`)
-
+    
     drawImgOnCanvas(gElCanvas, gCtx, elImg)
     renderCanvasTxt(meme, gCtx)
+}
+
+function drawImgOnCanvas(elCanvas,ctx,elImg) {
+    elCanvas.height = (elImg.naturalHeight / elImg.naturalWidth) * elCanvas.width
+
+    ctx.drawImage(elImg, 0, 0, elCanvas.width, elCanvas.height)
 }
 
 function renderCanvasTxt(meme, ctx) {

@@ -24,7 +24,6 @@ function resizeCanvas() {
     const elContainer = document.querySelector('.canvas-container')
     
     gElCanvas.width = elContainer.clientWidth
-    
 }
 
 

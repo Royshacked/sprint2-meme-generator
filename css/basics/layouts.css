@@ -98,6 +98,10 @@
     align-items: center;
 }
 
+.main-saved {
+    overflow-y: auto;
+}
+
 .main-footer {
     position: fixed;
     bottom: 0;

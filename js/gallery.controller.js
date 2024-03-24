@@ -13,8 +13,9 @@ function renderGallery(filterBy) {
 
 function onImgSelect(imgId) {
     setImg(imgId)
-    renderMeme()
     showMeme()
+    resizeCanvas()
+    renderMeme()
 }
 
 function renderKeyWords() {

@@ -18,8 +18,4 @@ function getRandomWords() {
     return keyWords
 }
 
-function drawImgOnCanvas(elCanvas,ctx,elImg) {
-    elCanvas.height = (elImg.naturalHeight / elImg.naturalWidth) * elCanvas.width
 
-    ctx.drawImage(elImg, 0, 0, elCanvas.width, elCanvas.height)
-}
