@@ -5,3 +5,7 @@
 .gallery-keywords > li {
    cursor: pointer; 
 }
+
+img:hover {
+    cursor: pointer;
+}

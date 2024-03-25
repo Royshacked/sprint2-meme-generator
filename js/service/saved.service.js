@@ -9,14 +9,15 @@ function getSavedMemes() {
 
 function removeSaved(idx) {
     const savedMemes = getSavedMemes()
-    
+    if(!savedMemes) return
     savedMemes.splice(idx,1)
 
     saveToLocalStorage('memes', savedMemes)
 }
 
 function saveMeme() {
-    const savedMemes = getSavedMemes()
+    let savedMemes = getSavedMemes()
+    if(!savedMemes) savedMemes = []
     const {selectedImgId} = gMeme
 
     const savedMemeIdx = savedMemes.findIndex(meme=> meme.selectedImgId===selectedImgId)

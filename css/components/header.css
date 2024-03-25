@@ -40,6 +40,8 @@
     color: var(--primary-titles-clr);
 
     font-size: 1.5em;
+
+    cursor: pointer;
 }
 
 
