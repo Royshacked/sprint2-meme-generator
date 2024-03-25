@@ -1,0 +1,24 @@
+.saved-container {
+    position: relative;
+    display: inline;
+}
+
+.exit-saved {
+    position:absolute;
+    right: 0;
+    
+    border:0;
+
+    background-color: transparent;
+
+    font-size: 1em;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.1s;
+}
+
+.exit-saved:hover {
+    border:2px solid whitesmoke;
+}

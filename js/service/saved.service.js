@@ -7,6 +7,14 @@ function getSavedMemes() {
     return savedMemes
 }
 
+function removeSaved(idx) {
+    const savedMemes = getSavedMemes()
+    
+    savedMemes.splice(idx,1)
+
+    saveToLocalStorage('memes', savedMemes)
+}
+
 function saveMeme() {
     const savedMemes = getSavedMemes()
     const {selectedImgId} = gMeme

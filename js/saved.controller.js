@@ -8,9 +8,12 @@ function renderSavedMemes() {
 }
 
 function createCanvasEl(savedMemes) {
-    const strHtml = savedMemes.map(savedMeme => `
-        <canvas class="saved-canvas-${savedMeme.selectedImgId}" height="320" width="320" onclick="onSavedImgSelect(${savedMeme.selectedImgId})"></canvas>
-        `
+    const strHtml = savedMemes.map((savedMeme,idx) => `
+        <div class="saved-container">
+            <canvas class="saved saved-canvas-${savedMeme.selectedImgId}" height="320" width="320" onclick="onSavedImgSelect(${savedMeme.selectedImgId})"></canvas>
+            <button class="exit-saved" onclick="onRemoveSaved(${idx})" title="remove meme">X</button>
+        </div>
+    `
     ).join('')
 
     const elSaved = document.querySelector('.main-saved')
@@ -33,6 +36,11 @@ function onSavedImgSelect(imgId) {
     showMeme()
     resizeCanvas()
     renderMeme()
+}
+
+function onRemoveSaved(idx) {
+    removeSaved(idx)
+    renderSavedMemes()
 }
 
 function showSaved() {
