@@ -14,7 +14,7 @@ function createCanvasEl(savedMemes) {
     else {
         strHtml = savedMemes.map((savedMeme, idx) => `
         <div class="saved-container">
-            <canvas class="saved saved-canvas-${savedMeme.selectedImgId}" height="200" width="200" onclick="onSavedImgSelect(${savedMeme.selectedImgId})"></canvas>
+            <canvas class="saved saved-canvas-${savedMeme.selectedImgId}" height="320" width="320" onclick="onSavedImgSelect(${savedMeme.selectedImgId})"></canvas>
             <button class="exit-saved" onclick="onRemoveSaved(${idx})" title="remove meme">X</button>
         </div>
     `
@@ -26,7 +26,7 @@ function createCanvasEl(savedMemes) {
 
 function renderSaved(savedMemes) {
     if (!savedMemes) return
-    
+
     savedMemes.forEach((savedMeme) => {
         let elSavedCanvas = document.querySelector(`.saved-canvas-${savedMeme.selectedImgId}`)
         let savedCtx = elSavedCanvas.getContext('2d')
