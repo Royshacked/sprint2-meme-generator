@@ -17,7 +17,7 @@ function drawImgOnCanvas(elCanvas,ctx,elImg) {
 
 function renderCanvasTxt(meme, ctx) {
     const { selectedLineIdx, lines } = meme
-
+    
     lines.forEach((line, idx) => {
         let { txt, size, color, x, y } = line
 
@@ -63,11 +63,11 @@ function onChangeFontSize(fontSize) {
 function onAddLine() {
     addLine()
     renderMeme()
-    clearEditInputs()
+    setEditInputs()
 }
 
 function onRemoveLine() {
-    clearEditInputs()
+    setEditInputs()
     removeLine()
     renderMeme()
 }
@@ -75,7 +75,7 @@ function onRemoveLine() {
 function onSwitchLine() {
     switchLine()
     renderMeme()
-    clearEditInputs()
+    setEditInputs()
 }
 
 function onClickLine(ev) {
@@ -83,7 +83,7 @@ function onClickLine(ev) {
 
     clickLine(offsetX, offsetY)
     renderMeme()
-    clearEditInputs()
+    setEditInputs()
 }
 
 
@@ -101,10 +101,10 @@ function showMeme() {
     document.querySelector('.main-editor').classList.remove('hidden')
     document.querySelector('.main-saved').classList.add('hidden')
     document.querySelector('.main-gallery').classList.add('hidden')
-    clearEditInputs()
+    setEditInputs()
 }
 
-function clearEditInputs() {
-    document.querySelector('.editor-txt-input').value = ''
-    document.querySelector('.inp-color').value = '#000000'
+function setEditInputs() {
+    document.querySelector('.editor-txt-input').value = getLineTxt()
 }
+

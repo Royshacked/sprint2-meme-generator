@@ -43,4 +43,3 @@ function showGallery() {
     document.querySelector('.main-saved').classList.add('hidden')
     document.querySelector('.main-gallery').classList.remove('hidden')
 }
-

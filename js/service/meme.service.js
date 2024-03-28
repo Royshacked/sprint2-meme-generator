@@ -19,6 +19,12 @@ function setImg(imgId) {
     }
 }
 
+function getLineTxt() {
+    const { lines , selectedLineIdx } = gMeme
+
+    return lines[selectedLineIdx].txt
+}
+
 function setSavedImg(imgId) {
     const savedMemes = getSavedMemes() 
     gMeme = savedMemes.find(savedMeme => savedMeme.selectedImgId === imgId) 
@@ -53,9 +59,8 @@ function addLine() {
     if (lines.length > 0) var { y } = lines[lines.length - 1]
     else y = 0
 
-    lines.push(
-        { txt: 'Insert your text here...', size: 20, color: '#000000', x: 50, y: y + 50 }
-    )
+    lines[lines.length] = { txt: 'Insert your text here...', size: 20, color: '#000000', x: 50, y: y + 50 }
+    gMeme.selectedLineIdx = lines.length-1
 }
 
 function removeLine() {

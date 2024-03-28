@@ -120,6 +120,7 @@
 }
 
 @media screen and (max-width: 800px) {
+    /* Header */
     .header-nav {
         position: fixed;
         top: 0;
@@ -140,6 +141,8 @@
         transition: transform 0.5s
     }
 
+    /* Main Gallery Start */
+
     body.menu-open .header-nav {
         transform: translateX(0);
     }
@@ -151,6 +154,8 @@
 
         padding-inline-end: 0;
     }
+
+    /* Main Gallery End */
 
     .nav-gallery {
         border-inline-end: 0;
