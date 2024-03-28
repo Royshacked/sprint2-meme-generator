@@ -104,7 +104,7 @@ function showMeme() {
 }
 
 function setEditInputs() {
-    document.querySelector('.editor-txt-input').value = ''
+    document.querySelector('.editor-txt-input').value = getLineTxt()
     // getLineTxt()
 }
 

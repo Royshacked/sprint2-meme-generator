@@ -14,7 +14,7 @@ function setImg(imgId) {
         selectedImgId: imgId,
         selectedLineIdx: 0,
         lines: [
-            { txt: 'Insert your text here...', size: 20, color: '#000000', x: 50, y: 50, isDrag: false },
+            { txt: '', size: 20, color: '#000000', x: 50, y: 50, isDrag: false },
         ]
     }
 }
@@ -59,7 +59,7 @@ function addLine() {
     if (lines.length > 0) var { y } = lines[lines.length - 1]
     else y = 0
 
-    lines[lines.length] = { txt: 'Insert your text here...', size: 20, color: '#000000', x: 50, y: y + 50, isDrag: false }
+    lines[lines.length] = { txt: '', size: 20, color: '#000000', x: 50, y: y + 50, isDrag: false }
     gMeme.selectedLineIdx = lines.length - 1
 }
 
