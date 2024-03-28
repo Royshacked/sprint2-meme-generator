@@ -21,8 +21,9 @@ function setImg(imgId) {
 
 function getLineTxt() {
     const { lines, selectedLineIdx } = gMeme
-
-    return lines[selectedLineIdx].txt
+    const { txt } = lines[selectedLineIdx]
+    if (txt === 'Insert your text here...') txt = ''
+    return txt
 }
 
 function setSavedImg(imgId) {
@@ -76,7 +77,7 @@ function switchLine() {
     if (gMeme.selectedLineIdx >= gMeme.lines.length) gMeme.selectedLineIdx = 0
 }
 
-function isTxtClicked({x,y}) {
+function isTxtClicked({ x, y }) {
     const { lines } = gMeme
     var isClicked = false
 
@@ -85,26 +86,26 @@ function isTxtClicked({x,y}) {
 
             gMeme.selectedLineIdx = idx
             isClicked = true
-        } 
+        }
     })
     return isClicked
 }
 
 function setTxtDrag(isDrag) {
-    const { lines , selectedLineIdx } = gMeme
+    const { lines, selectedLineIdx } = gMeme
 
     lines[selectedLineIdx].isDrag = isDrag
 }
 
 function isDrag() {
     const { lines } = gMeme
-    return lines.find(line=> line.isDrag)
+    return lines.find(line => line.isDrag)
 }
 
-function moveTxt(dx,dy) {
-    const { lines , selectedLineIdx } = gMeme
-    const { x , y } = lines[selectedLineIdx]
-    
+function moveTxt(dx, dy) {
+    const { lines, selectedLineIdx } = gMeme
+    const { x, y } = lines[selectedLineIdx]
+
     lines[selectedLineIdx].x = x + dx
     lines[selectedLineIdx].y = y + dy
 }

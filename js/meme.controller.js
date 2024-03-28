@@ -21,9 +21,9 @@ function renderCanvasTxt(meme, ctx) {
     
     lines.forEach((line, idx) => {
         let { txt, size, color, x, y } = line
-
+        
         txt === '' ? txt = 'Insert your text here...' : txt
-
+        
         ctx.textBaseline = 'top'
         ctx.lineWidth = 1
         ctx.font = `bold ${size}px  arial`
@@ -97,6 +97,7 @@ function onSaveMeme() {
 }
 
 function showMeme() {
+    setEditInputs()
     document.querySelector('.main-editor').classList.remove('hidden')
     document.querySelector('.main-saved').classList.add('hidden')
     document.querySelector('.main-gallery').classList.add('hidden')
@@ -105,7 +106,6 @@ function showMeme() {
 
 function setEditInputs() {
     document.querySelector('.editor-txt-input').value = getLineTxt()
-    // getLineTxt()
 }
 
 function onDown(ev) {
@@ -133,7 +133,7 @@ function onMove(ev) {
 
 function onUp() {
     setTxtDrag(false)
-    document.body.style.cursor = 'grab'
+    document.body.style.cursor = 'auto'
 }
 
 function getEvPos(ev) {
