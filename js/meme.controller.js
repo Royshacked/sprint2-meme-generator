@@ -1,4 +1,5 @@
 'use strict'
+var gStartPos
 
 function renderMeme() {
     const meme = getMeme()
@@ -79,9 +80,7 @@ function onSwitchLine() {
 }
 
 function onClickLine(ev) {
-    const { offsetX, offsetY } = ev
-
-    clickLine(offsetX, offsetY)
+    isTxtClicked(ev)
     renderMeme()
     setEditInputs()
 }
@@ -105,6 +104,54 @@ function showMeme() {
 }
 
 function setEditInputs() {
-    document.querySelector('.editor-txt-input').value = getLineTxt()
+    document.querySelector('.editor-txt-input').value = ''
+    // getLineTxt()
 }
 
+function onDown(ev) {
+    gStartPos = getEvPos(ev)
+    
+    if(!isTxtClicked(gStartPos)) return 
+
+    setTxtDrag(true)
+    document.body.style.cursor = 'grabbing'
+}
+
+function onMove(ev) {
+    if(!isDrag()) return 
+    const pos = getEvPos(ev)
+    
+    const dx = pos.x - gStartPos.x
+    const dy = pos.y - gStartPos.y
+
+    moveTxt(dx,dy)
+
+    gStartPos = pos
+
+    renderMeme()
+}
+
+function onUp() {
+    setTxtDrag(false)
+    document.body.style.cursor = 'grab'
+}
+
+function getEvPos(ev) {
+    const touchEvs = ['touchstart' , 'touchend' , 'touchmove']
+    
+    if(touchEvs.includes(ev.type)) {
+        ev.preventDefault()
+        ev = ev.changedTouches[0]
+
+        return {
+            x: ev.pageX - ev.target.offsetLeft - ev.target.clientLeft,
+            y: ev.pageY - ev.target.offsetTop - ev.target.clientTop,
+        }
+    }
+    else {
+        return {
+            x: ev.offsetX,
+            y: ev.offsetY, 
+        }
+    }
+}

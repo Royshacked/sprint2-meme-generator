@@ -8,10 +8,7 @@ function onInit() {
     gElCanvas = document.querySelector('canvas')
     gCtx = gElCanvas.getContext('2d')
 
-    window.addEventListener('resize', () => {
-        resizeCanvas()
-        renderMeme()
-    })
+    addListeners()
 
     renderGallery()
     renderKeyWords()
@@ -28,5 +25,27 @@ function resizeCanvas() {
 
 function toggleMenu() {
     document.body.classList.toggle('menu-open')
+}
+
+function addListeners() {
+    addMouseListeners() 
+    addTouchListeners()
+
+    window.addEventListener('resize', () => {
+        resizeCanvas()
+        renderMeme()
+    })
+}
+
+function addMouseListeners() {
+    gElCanvas.addEventListener('mousedown', onDown)
+    gElCanvas.addEventListener('mouseup', onUp)
+    gElCanvas.addEventListener('mousemove', onMove)
+}
+
+function addTouchListeners() {
+    gElCanvas.addEventListener('touchstart', onDown)
+    gElCanvas.addEventListener('touchend', onUp)
+    gElCanvas.addEventListener('touchmove', onMove)
 }
 
