@@ -2,7 +2,6 @@
 
 let gElCanvas
 let gCtx
-let isResizing = false
 
 function onInit() {
     gElCanvas = document.querySelector('canvas')

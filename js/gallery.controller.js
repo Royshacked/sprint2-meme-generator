@@ -42,4 +42,5 @@ function showGallery() {
     document.querySelector('.main-editor').classList.add('hidden')
     document.querySelector('.main-saved').classList.add('hidden')
     document.querySelector('.main-gallery').classList.remove('hidden')
+    if(document.body.clientWidth<=800) toggleMenu()
 }

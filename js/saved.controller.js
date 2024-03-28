@@ -53,5 +53,6 @@ function showSaved() {
     document.querySelector('.main-editor').classList.add('hidden')
     document.querySelector('.main-saved').classList.remove('hidden')
     document.querySelector('.main-gallery').classList.add('hidden')
+    if(document.body.clientWidth<=800) toggleMenu()
     renderSavedMemes()
 }
